@@ -1,5 +1,5 @@
-import {Router} from "express";
-import photoController from "../controllers/photo.controller.js";
+const Router = require("express");
+const photoController = require("../controllers/photo.controller.js");
 
 
 const router = new Router();
@@ -11,4 +11,4 @@ router.put('/photo', photoController.updatePhoto);
 router.delete('/photo', photoController.deletePhoto);
 
 
-export {router};
+module.exports = router;

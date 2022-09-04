@@ -10,6 +10,4 @@ class PhotoController {
     async deletePhoto(req, res) {}
 }
 
-const photoController = new PhotoController();
-
-export default photoController;
+module.exports = new PhotoController();
