@@ -8,7 +8,7 @@ router.post('/photo', photoController.uploadPhoto);
 router.get('/photo', photoController.getAllPhotos);
 router.get('/photo/:id', photoController.getOnePhoto);
 router.put('/photo', photoController.updatePhoto);
-router.delete('/photo', photoController.deletePhoto);
+router.delete('/photo/:id', photoController.deletePhoto);
 
 
 module.exports = router;
