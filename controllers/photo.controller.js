@@ -13,9 +13,16 @@ class PhotoController {
         res.json(photos.rows);
     }
 
+    async getAllPhotosByCollection(req, res) {
+      const id = req.params.id;
+      const photos = await db.query(`SELECT * FROM photo where collection_id = $1`, [id]);
+
+      res.json(photos.rows);
+    }
+
     async getOnePhoto(req, res) {
         const id = req.params.id;
-        const photo = await db.query(`SELECT * FROM photo where id = $1`, [photo]);
+        const photo = await db.query(`SELECT * FROM photo where id = $1`, [id]);
 
         res.json(photo.rows[0]);
     }
